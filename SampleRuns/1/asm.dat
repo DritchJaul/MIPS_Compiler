@@ -1,0 +1,9 @@
+.data
+	stuff: .asciiz "THIS IS A STRING!"
+	.align 2
+	bro: .word 34, 1, 2, 3, 4
+	dud1e: .ascii "HI"
+.text
+add $a0, $a1, $a0
+syscall#This is a syscall
+lw $a0, 0($v0)

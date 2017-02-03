@@ -1,0 +1,15 @@
+.data
+	stuff2: .ascii "ABBACDDCF"
+	buffer: .space 16
+	words: .ascii "0123456789"
+.text
+	lw $t0, 0($s0) #comment
+# More comments
+	addi $s0, $s0, 4
+Branch:
+	beq $t0, $0, Branch
+	syscall		
+
+
+	
+		

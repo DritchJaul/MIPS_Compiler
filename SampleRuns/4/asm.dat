@@ -1,0 +1,15 @@
+.data
+	stuff2: .ascii "ABBACDDCF"
+.text
+Loop:
+	lw $t0, 0($s0) #comment
+# More comments
+	addi $s0, $s0, 4
+Branch:
+	beq $t0, $0, Branch
+	syscall		
+	addi $s0, $s0, 32
+	j Loop #Repeat forever
+
+	
+		

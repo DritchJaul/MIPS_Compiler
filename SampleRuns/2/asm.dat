@@ -1,0 +1,17 @@
+.data
+	moreData: .byte 2, 3, 4, 5, 6, 63
+	.align 2
+	label: .ascii "AAAABBBB"
+.text
+add $a0, $a1, $a0
+syscall	#This is a syscall
+ori $a0, $a1, $a2
+lui $a4,25 #loading 25 to register
+lui $t7, 126 #loading 126 to register 
+addi $t3, $t4, $t7 #adds 25 and 126 and stores the result in register t3
+andi $s2, $t3, $t4 #adds result of previous add and adds 25
+addi $t9, $s2, $t7 #adds previous add with 126
+
+
+	
+		
